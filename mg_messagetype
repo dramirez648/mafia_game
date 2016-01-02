@@ -1,0 +1,92 @@
+## Daniel Ramirez
+## Mafia Game - Message Type
+
+public enum MessageType {
+		CLIENT_ID_NOTIF(0),
+    ROLE_NOTIF(1),
+		EVERYONE_CLOSE_EYES(2),
+		MAFIA_OPEN_EYES(3),
+		MAFIA_MAKE_KILL(4),
+		MAFIA_OFFER_KILL(5),
+		MAFIA_CLOSE_EYES(6),
+		COP_OPEN_EYES(7),
+		COP_MAKE_ACCUSE(8),
+		COP_OFFER_ACCUSE(9),
+		COP_CLOSE_EYES(10),
+		MAFIA_WIN(11),
+		COP_WIN(12),
+		GAME_RESET(14),
+		INFO(16),
+		SYNC_PLAYER_LIST(17),
+		KILLED_BY_MAFIA(18),
+		KILLED_BY_VOTE(19),
+		COP_ACCUSE_RIGHT(20),
+		COP_ACCUSE_WRONG(21),
+		EVERYONE_OPEN_EYES(22),
+		PUBLIC_MAKE_ACCUSE(23),
+    PUBLIC_OFFER_ACCUSE(24),
+		;
+		
+		
+		int val;
+		private MessageType(int val) {
+			this.val = val;
+		}
+		
+		public int value() {
+			return val;
+		}
+		
+		public static MessageType get(int val) {
+			switch (val) {
+			case 0:
+				return CLIENT_ID_NOTIF;
+			case 1:
+			  return ROLE_NOTIF;
+			case 2:
+				return EVERYONE_CLOSE_EYES;
+			case 3:
+				return MAFIA_OPEN_EYES;
+			case 4:
+				return MAFIA_MAKE_KILL;
+			case 5:
+			  return MAFIA_OFFER_KILL;
+			case 6:
+				return MAFIA_CLOSE_EYES;
+			case 7:
+				return COP_OPEN_EYES;
+			case 8:
+				return COP_MAKE_ACCUSE;
+			case 9:
+			  return COP_OFFER_ACCUSE;
+			case 10:
+				return COP_CLOSE_EYES;
+			case 11:
+			  return MAFIA_WIN;
+      case 12:
+        return COP_WIN;
+      case 14:
+        return GAME_RESET;
+      case 16:
+        return INFO;
+      case 17:
+        return SYNC_PLAYER_LIST;
+      case 18:
+        return KILLED_BY_MAFIA;
+      case 19:
+        return KILLED_BY_VOTE;
+      case 20:
+        return COP_ACCUSE_RIGHT;
+      case 21:
+        return COP_ACCUSE_WRONG;
+      case 22:
+        return EVERYONE_OPEN_EYES;
+      case 23:
+        return PUBLIC_MAKE_ACCUSE;
+      case 24:
+        return PUBLIC_OFFER_ACCUSE;
+			default:
+				return null;
+			}
+		}
+	}
