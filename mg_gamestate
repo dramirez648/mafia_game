@@ -1,0 +1,14 @@
+## Daniel Ramirez
+## Mafia Game - Game State
+
+public enum GameState {
+  WAITING,
+  ROUND_STARTED,
+  WAIT_MAFIA_KILL,
+  MAFIA_MADE_KILL,
+  WAIT_COP_ACCUSE,
+  COP_MADE_ACCUSE,
+  WAIT_PUBLIC_ACCUSE,
+  PUBLIC_MADE_ACCUSE,
+  OVER
+}
